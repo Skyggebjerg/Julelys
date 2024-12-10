@@ -1,0 +1,25 @@
+.pio/build/m5stack-atoms3/libde8/FastLED/engine_events.cpp.o: \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/engine_events.cpp \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/engine_events.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fixed_vector.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/inplacenew.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/namespace.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/singleton.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/xymap.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/force_inline.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/ref.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/scoped_ptr.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/template_magic.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/xmap.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/lut.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/allocator.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/crgb.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/chsv.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/color.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/lib8tion/types.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/screenmap.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fl/str.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fixed_map.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/json.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/third_party/arduinojson/json.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/third_party/arduinojson/json.hpp

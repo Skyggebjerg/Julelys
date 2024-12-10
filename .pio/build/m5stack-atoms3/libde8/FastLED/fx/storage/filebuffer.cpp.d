@@ -1,0 +1,24 @@
+.pio/build/m5stack-atoms3/libde8/FastLED/fx/storage/filebuffer.cpp.o: \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/storage/filebuffer.cpp \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/storage/filebuffer.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/file_system.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/namespace.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/ref.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/scoped_ptr.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/template_magic.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/video.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/fx2d.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/xymap.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/force_inline.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/xmap.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/lut.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/allocator.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/crgb.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/chsv.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/color.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/lib8tion/types.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/fx.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/detail/draw_context.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/detail/transition.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/fx/time.h \
+ .pio/libdeps/m5stack-atoms3/FastLED/src/callback.h
