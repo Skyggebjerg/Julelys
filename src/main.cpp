@@ -1,26 +1,9 @@
 #include <Arduino.h>
 
-/*
-*******************************************************************************
-* Copyright (c) 2022 by M5Stack
-*                  Equipped with Atom-Lite/Matrix sample source code
-*                          配套  Atom-Lite/Matrix 示例源代码
-* Visit for more information: https://docs.m5stack.com/en/unit/rtc
-* 获取更多资料请访问: https://docs.m5stack.com/zh_CN/unit/rtc
-*
-* Product: RTC.  实时时钟
-* Date: 2022/7/29
-*******************************************************************************
-  Please connect to Port A,The time is displayed on the screen.
-  请连接端口A,屏幕上显示时间。
-*/
-
-//#include "M5Atom.h"
 #include <M5Unified.h>
 #include "Unit_RTC.h"
 
 Unit_RTC RTC;
-
 rtc_time_type RTCtime;
 rtc_date_type RTCdate;
 
@@ -32,35 +15,43 @@ void setup() {
     pinMode(SSR, OUTPUT); // Set the SSR pin as output
     auto cfg = M5.config();
     M5.begin(cfg);
-    //M5.begin(true, false, true);  // Init M5Atom.  初始化M5Atom
     Serial.begin(115200);
     // Initialize I2C communication with custom pins
     Wire.begin(13, 15); // SDA, SCL for the ADC
-
     Serial.print("RTC");
-    RTC.begin();  // Example Initialize the RTC clock.  初始化RTC时钟
-    RTCtime.Hours   = 23;  // Set the RTC clock time.  设置RTC时钟时间
-    RTCtime.Minutes = 23;
+    RTC.begin();  // Example Initialize the RTC clock. 
+    RTCtime.Hours   = 0;  // Set the RTC clock time.
+    RTCtime.Minutes = 12;
     RTCtime.Seconds = 0;
-
-    RTCdate.WeekDay = 3;  // Set the RTC clock date.  设置RTC时钟日期
+    RTCdate.WeekDay = 4;  // Set the RTC clock date.
     RTCdate.Month   = 12;
-    RTCdate.Date    = 10;
+    RTCdate.Date    = 11;
     RTCdate.Year    = 2024;
 
     //RTC.setTime(&RTCtime);  // Example Synchronize the set time to the RTC.
-                            // 将设置的时间同步至RTC
+                            // 
     //RTC.setDate(&RTCdate);  // Synchronize the set date to the RTC.
-                            // 将设置的日期同步至RTC
-    //M5.dis.fillpix(0x00ff00);
+
 }
 
 void loop() {
-    RTC.getTime(&RTCtime);  // To get the time.  获取时间
-    RTC.getDate(&RTCdate);  // Get the date.  获取日期
+    RTC.getTime(&RTCtime);  // To get the time. 
+    RTC.getDate(&RTCdate);  // Get the date.  
     Serial.printf("RTC Time Now is \n%02d:%02d:%02d\n", RTCtime.Hours,
                   RTCtime.Minutes, RTCtime.Seconds);
     Serial.printf("RTC Date Now is \n%02d:%02d:%02d WeekDay:%02d\n",
                   RTCdate.Year, RTCdate.Month, RTCdate.Date, RTCdate.WeekDay);
+
+// Check if the current time is between 6:30 and 9:00 or between 16:00 and 23:50
+    if  ((RTCtime.Hours >= 6 && RTCtime.Hours <= 8) || (RTCtime.Hours >= 16 && RTCtime.Hours <= 23)) { // If the current time is between 6:00 and 8:59 or between 16:00 and 23:59
+        digitalWrite(SSR, HIGH); // Turn on SSR
+        //Serial.println(RTCtime.Hours);
+        //Serial.println("SSR ON");
+    } else {
+        digitalWrite(SSR, LOW); // Turn off SSR
+        //Serial.println(RTCtime.Hours);
+        //Serial.println("SSR OFF");
+    }
+
     delay(1000);
 }
